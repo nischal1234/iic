@@ -1,3 +1,13 @@
+/* Connection diagrame
+SDA->10
+SCK->13
+MOSI->11
+MISO->12
+GND->GND
+RST->9
+3.3V->Power 3.3V
+
+*/
 #include <SPI.h>
 #include <MFRC522.h> //please download MFRC522 library from arduino library manager
  
