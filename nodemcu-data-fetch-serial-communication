@@ -1,0 +1,19 @@
+//this is the code for NODEMCU side as a receiver
+void setup()
+{
+  Serial.begin(9600);
+ 
+}
+
+void loop()
+{
+  if (Serial.available()){ //check of serial data is available or not
+    
+    String payload = Serial.readStringUntil('\r\n'); //research about \r and \n
+    int cmd = payload.toInt(); //converting string to integer , no need to convert but i need this because i need a integer data
+    
+    Serial.println(payload); //print the incoming data i.e 1 to nodemcu console 
+    
+    
+  }
+}
